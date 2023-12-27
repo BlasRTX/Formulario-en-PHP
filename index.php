@@ -44,6 +44,11 @@
 
     </form>
 
+<!--ff-->
+    <?php
+    include("register.php");
+    ?>
+
 
 
 
