@@ -16,27 +16,28 @@
         <p>Iniciar registro</p>
 
         <div class="input-wrapped">
-            <input type="text" name="name" placeholder="Nombre"
+            <input type="text" name="name" placeholder="Nombre">
+            <img class="input-icon" src="icon/usuario.png" alt="">
         </div>
 
         <div class="input-wrapped">
-            <input type="text" name="add" placeholder="Apellido"
+            <input type="text" name="address" placeholder="Direccion">
+            <img class="input-icon" src="icon/marcador.png" alt="">
         </div>
 
         <div class="input-wrapped">
-            <input type="text" name="address" placeholder="Direccion"
+            <input type="text" name="phone" placeholder="Telefono">
+            <img class="input-icon" src="icon/llamada-telefonica.png" alt="">
         </div>
 
         <div class="input-wrapped">
-            <input type="text" name="phone" placeholder="Telefono"
+            <input type="text" name="email" placeholder="Correo electronico">
+            <img class="input-icon" src="icon/email.png" alt="">
         </div>
 
         <div class="input-wrapped">
-            <input type="text" name="email" placeholder="Correo electronico"
-        </div>
-
-        <div class="input-wrapped">
-            <input type="text" name="password" placeholder="Contrasenia"
+            <input type="text" name="password" placeholder="Contrasenia">
+            <img class="input-icon" src="icon/cerrar.png" alt="">
         </div>
 
         <input class="btn" type="submit" namespace="register" value="Enviar">
