@@ -40,7 +40,7 @@
             <img class="input-icon" src="icon/cerrar.png" alt="">
         </div>
 
-        <input class="btn" type="submit" namespace="register" value="Enviar">
+        <input class="btn" type="submit" name="regist" value="Enviar">
 
     </form>
 

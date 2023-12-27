@@ -3,14 +3,14 @@
 include("conection.php");
 
 /*Llama al metodo post en donde se encuentran las casillas*/
-if (isset($_POST['register'])) {
+if (isset($_POST['regist'])) {
     /*Llama al registro en donde se encuentran las casillas*/
     if (
-        isset($_POST['name'])    >= 1 ||
-        isset($_POST['address']) >= 1 ||
-        isset($_POST['phone'])   >= 1 ||
-        isset($_POST['email'])   >= 1 ||
-        isset($_POST['password']) >= 1
+        strlen($_POST['name'])    >= 1 &&
+        strlen($_POST['address']) >= 1 &&
+        strlen($_POST['phone'])   >= 1 &&
+        strlen($_POST['email'])   >= 1 &&
+        strlen($_POST['password']) >= 1
         ){
         /*Almacenar en variables*/
         //$name = trim($_POST['id']);
@@ -21,8 +21,8 @@ if (isset($_POST['register'])) {
         $password = trim($_POST['password']);
         $date = date("d/m/y");
         /*Insertar variables en la base de datos*/
-        $queryinsert = "INSERT INTO usuario(id, nombre, direccion, telefono, correo, clave, fecha)
-                  VALUES('$id', '$name', '$address', '$phone', '$email', '$password', '$date')";
+        $queryinsert = "INSERT INTO usuario(nombre, direccion, telefono, correo, clave, fecha)
+                  VALUES('$name', '$address', '$phone', '$email', '$password', '$date')";
         /*Consultar insercion de los datos*/
         $result = mysqli_query($conex, $queryinsert);
         /*Si realizar*/
