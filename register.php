@@ -37,7 +37,6 @@ if (isset($_POST['regist'])) {
                 <h3 class="error" >Que pasa master? Ocurrio un error. Volver a intentar.</h3>
                 <?php
             }
-            
         }
         else{
             /*Insercion incompleta por falta de datos en formulario.*/  
