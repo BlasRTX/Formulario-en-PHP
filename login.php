@@ -7,7 +7,7 @@
 </head>
 <body>
     <!--Campo para el login del usuario-->
-<form action="home.php" method="post">
+<form method="post" action="home.php">
         <h2>Formulario</h2>
         <p>Iniciar registro</p>
         <div class="input-wrapped">
@@ -22,7 +22,8 @@
         </div>
         <!--Boton para registrar el usuario-->
         <input class="btn" type="submit" name="loginess" value="Iniciar Sesion">
-        <a href="home.php"></a>
+        
+        
     </form>
     
 </body>

@@ -1,5 +1,5 @@
 <?php
-/*<!--llamar al archivo que contiene la conexion a la base de datos-->*/
+/*Llama la conexion de la base de datos*/
 include("conection.php");
 
 /*Llama al metodo post en donde se encuentran las casillas*/
