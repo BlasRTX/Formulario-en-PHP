@@ -1,0 +1,23 @@
+container{
+    position: relative;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card{
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.card-img-top{
+    position: relative;
+    width: 100px;
+    height: 200px;
+    display: flex;
+
+}

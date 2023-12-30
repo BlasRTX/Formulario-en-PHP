@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
 </head>
 <body>
     <!--Campo para el login del usuario-->
-<form method="post" action="home.php">
-        <h2>Formulario</h2>
-        <p>Iniciar registro</p>
+<form method="post" action="begin.php">
+        <h2>Bienvenido.</h2>
+        <p>Iniciar Sesion</p>
         <div class="input-wrapped">
             <!--Campo para el correo del usuario-->
             <input type="text" name="email" placeholder="Correo electronico" required>
@@ -21,10 +22,8 @@
             <img class="input-icon" src="icon/cerrar.png" alt="">
         </div>
         <!--Boton para registrar el usuario-->
-        <input class="btn" type="submit" name="loginess" value="Iniciar Sesion">
-        
-        
-    </form>
-    
+        <input class="btn" type="submit" name="login" value="Iniciar Sesion">
+        <a href="index.php" > No tienes cuenta? Registrar.<a/>     
+    </form>   
 </body>
 </html>

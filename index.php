@@ -45,13 +45,7 @@
     </form>
 <!--llamar al archivo que contiene el registro de los datos a la base de datos-->
     <?php
-    include("register.php");
-    include("login.php");
+    require("register.php");
     ?>
-
-
-
-
 </body>
-
 </html>

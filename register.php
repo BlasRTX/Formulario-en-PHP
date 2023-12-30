@@ -1,6 +1,6 @@
 <?php
 /*Llama la conexion de la base de datos*/
-include("conection.php");
+require("conection.php");
 
 /*Llama al metodo post en donde se encuentran las casillas*/
 if (isset($_POST['regist'])) {
