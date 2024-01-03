@@ -238,6 +238,13 @@ A continuación, se muestra el resultado funcional final:
 
 ![ ](https://github.com/BlasRTX/Formulario-en-PHP/blob/main/images/images/test/test3.png)
 
+![ ](https://github.com/BlasRTX/Formulario-en-PHP/blob/main/images/images/Resultado%20pagina%20web%20formulario/1%20Pagina%20formulario%20inicio%20secion.png)
+
+![ ](https://github.com/BlasRTX/Formulario-en-PHP/blob/main/images/images/Resultado%20pagina%20web%20formulario/3%20Pagina%20formulacio%20inicio.png)
+
+![ ](https://github.com/BlasRTX/Formulario-en-PHP/blob/main/images/images/Resultado%20pagina%20web%20formulario/4%20Pagina%20web%20formulario%20usuarios.png)
+
+![ ](https://github.com/BlasRTX/Formulario-en-PHP/blob/main/images/images/Resultado%20pagina%20web%20formulario/5%20Pagina%20formulario%20cerrar%20sesion.png)
 
 
 #### 4. Pruebas
