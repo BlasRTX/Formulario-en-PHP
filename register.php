@@ -33,15 +33,17 @@ if (isset($_POST['regist'])) {
                             /*Ejemplo: Holaa123**/
                             if((strlen($password) >= 8 ) && (preg_match('/[A-Za-z]+/', $password) && preg_match('/[0-9]+/', $password))){
 
-                                /*Consulta en la base de datos*/
+                                /*query de base de datos*/
                                 $query = "SELECT * FROM usuario WHERE correo = 'email' || clave = 'password' ";
 
+                                /*Realizar la consulta a la base de datos*/
                                 $querycons = mysqli_query($conex, $query);
 
-                                $resultquery = mysqli_fetch_assoc($querycons);
+                                /*Obtiene el numero de filas en la base de datos*/
+                                $resultquery = mysqli_num_rows($querycons);
 
                                  /*SI el dato existe en la base de datos*/
-                                if($resultquery > 0){
+                                if($resultquery =! 0){
                                     ?>
                                     <h3 class="error" >No mi rey, ya existe.</h3>
                                     <?php
@@ -63,7 +65,7 @@ if (isset($_POST['regist'])) {
                                                            <h3 class="error" >Error.</h3>
                                                            <?php
                                                     }
-                                                    
+
                                 }
                         
                             }else{
