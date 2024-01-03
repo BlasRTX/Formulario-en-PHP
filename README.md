@@ -43,6 +43,10 @@ En otras palabras, es una **colección de datos estructurados**.
 #### CSS
 Lenguaje que maneja el **diseño y presentación de las páginas web**, es decir, cómo lucen cuando un usuario las visita. Usado en el formulario.
 
+#### Bootstrap 5
+Framework CSS de código abierto que **favorece el desarrollo web** de un modo más sencillo y rápido. 
+
+Incluye **plantillas de diseño basadas en HTML, CSS y JavaScript** con la que es posible **modificar tipografías, formularios, botones, tablas, navegaciones, menús desplegables**, etc.
 
 ## Herramientas de desarrollo
 #### 1. Instalacion y uso de XAMPP
@@ -116,7 +120,29 @@ Boton
 ```php
 <input class="btn" type="submit" name="regist" value="Enviar">
 ```
+#### Instalar Bootstrap 5
 
+Si vas a usar Bootstrap para crear tu sitio web, el primer paso será instalar el framework.
+
+Para utilizar las herramientas proporcionadas, es importante seguir los pasos a través de su página web oficial: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+El resultado debería ser algo como esto:
+
+```php
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
 
 #### 3. Base de Datos
 
