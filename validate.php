@@ -4,7 +4,7 @@
 require("conection.php");
 
 //Validar que el boton de login para iniciar sesion haya sido presionado
-if (isset($_POST['loginess'])) {
+if (isset($_POST['loginis'])) {
         //Obtener los valores enviados del login
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -17,9 +17,8 @@ if (isset($_POST['loginess'])) {
                         $val_query = mysqli_num_rows($result);
 
                         if($val_query =! 0){
-                                ?>
-                                <h3 class="success" >Entra a inicio.</h3>
-                                <?php
+                                header("Location: begin.php");
+                                exit();        
                         }else{
                                 ?>
                                 <h3 class="error" >Error.</h3>

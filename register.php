@@ -59,6 +59,8 @@ if (isset($_POST['regist'])) {
                                                             ?>
                                                            <h3 class="success" >Usuario registrado.</h3>
                                                            <?php
+                                                           header("Location: begin.php");
+                                                           exit(); 
                                                     }else{
                                                         /*Error de los datos en el formulario.*/  
                                                             ?>

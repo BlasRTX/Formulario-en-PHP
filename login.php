@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--Campo para el login del usuario-->
-<form method="post" action="begin.php">
+<form method="post">
         <h2>Bienvenido.</h2>
         <p>Iniciar Sesion</p>
         <div class="input-wrapped">
@@ -22,8 +22,13 @@
             <img class="input-icon" src="icon/cerrar.png" alt="">
         </div>
         <!--Boton para registrar el usuario-->
-        <input class="btn" type="submit" name="login" value="Iniciar Sesion">
+        <input class="btn" type="submit" name="loginis" value="Iniciar Sesion">
         <a href="index.php" > No tienes cuenta? Registrar.<a/>     
     </form>   
+
+    <?php
+    include("validate.php");
+    ?>
+
 </body>
 </html>
