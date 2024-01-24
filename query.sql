@@ -22,3 +22,5 @@ SELECT * FROM usuario WHERE correo = '$email' AND clave = '$password' ";
 --Insertar nueva cuenta--
 "INSERT INTO usuario(nombre, direccion, telefono, correo, clave, fecha) VALUES --('$name', '$address', '$phone', '$email', '$password', '$date')";
 
+
+--Creacion de consultas SQL con NUEVAS TABLAS--

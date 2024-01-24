@@ -31,13 +31,32 @@
           <a class="nav-link" href="#">Contactos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cerrar Sesion</a>
+          <a class="nav-link" href="logout.php">Cerrar Sesion</a>
         </li>
       </ul>   
     </div>
   </div>
 </nav>
-   
+<!-- Modal Cerrar Sesion -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cerrar sesion</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <p>Seguro que desea terminar la sesion actual?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Cerrar Sesion -->
+
     <!--Barra de navegacion-->
     <br>
 <h2 class="text-center">Bienvenido</h2>
