@@ -1,3 +1,4 @@
+<?php include("../template/header.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,33 +9,7 @@
 </head>
 <body>
 <div>
-  <!--Barra de navegacion-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Makunga Place</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!--Contenido dentro de la barra de navegacion-->
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Productos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contactos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cerrar Sesion</a>
-        </li>
-      </ul>   
-    </div>
-  </div>
-</nav>
-</div>
+
 <div class="container">
   <br>
 <h2 class="text-center">Informacion de usuarios</h2>
@@ -59,7 +34,7 @@
     <!-- Informacion de la base de datos-->
     <?php
     /*Require en caso de error, cierra inmetiato*/
-    require("conection.php");
+    require("../database/conection.php");
     /*Acceder a consulta base de datos*/
     $query = ("SELECT * FROM `usuario`");
     /*Almacenar consulta para ejecutar*/
@@ -88,7 +63,7 @@
     
   </tbody>
 </table>
-<a href="begin.php" class="btn btn-primary" >Volver a Inicio</a>
+<a href="../web/begin.php" class="btn btn-primary" >Volver a Inicio</a>
 </div>
             
       

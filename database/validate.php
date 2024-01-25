@@ -1,7 +1,7 @@
 <?php
 
 /*llamar al archivo que contiene la conexion a la base de datos*/
-require("conection.php");
+require("../database/conection.php");
 
 //Validar que el boton de login para iniciar sesion haya sido presionado
 if (isset($_POST['loginis'])) {
