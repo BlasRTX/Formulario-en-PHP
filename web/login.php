@@ -23,7 +23,7 @@
         </div>
         <!--Boton para registrar el usuario-->
         <input class="btn" type="submit" name="loginis" value="Iniciar Sesion">
-        <a href="../web/index.php" > No tienes cuenta? Registrar.<a/>     
+        <a href="../web/table_user.php" > No tienes cuenta? Registrar.<a/>     
     </form>   
 
     <?php

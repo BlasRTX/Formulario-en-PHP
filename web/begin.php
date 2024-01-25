@@ -20,7 +20,7 @@
   <div class="card-body">
     <h5 class="card-title">Lista de usuarios</h5>
     <p class="card-text">Usuarios disponibles del sistema.</p>
-    <a href="../web/home.php" class="btn btn-primary">Ingresar</a>
+    <a href="../web/table_user.php" class="btn btn-primary">Ingresar</a>
   </div>
 </div>
 <!--PlaceHolder Lista de productos-->

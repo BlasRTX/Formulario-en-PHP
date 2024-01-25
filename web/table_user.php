@@ -1,4 +1,8 @@
-<?php include("../template/header.php") ?>
+<?php 
+include("../template/header.php");
+include("../template/form_create_user.php");
+include("../template/form_update_user.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +55,7 @@
       <td scope="row"><?php echo $raw['clave']; ?></td>
       <td scope="row"><?php echo $raw['fecha']; ?></td>
       <th>
-      <a href="" class="btn btn-warning" >Editar</a>
+      <a href="" class="btn btn-warning" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >Editar</a>
       <a href="" class="btn btn-danger" >Eliminar</a>
       </tr>
       </tr>
@@ -61,8 +65,10 @@
       ?>   
     
     
-  </tbody>
+    </tbody>
 </table>
+<div class="d-grid gap-2 col-2 mx-auto">
+<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" >Agregar Nuevo Usuario</a>
 <a href="../web/begin.php" class="btn btn-primary" >Volver a Inicio</a>
 </div>
             
