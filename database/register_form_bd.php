@@ -1,6 +1,6 @@
 <?php
 /*Llama la conexion de la base de datos*/
-require("../database/conection.php");
+require("../database/connection.php");
 
 /*1 Llama al metodo post en donde se encuentran las casillas*/
 if (isset($_POST['regist'])) {
@@ -33,8 +33,8 @@ if (isset($_POST['regist'])) {
                             /*Ejemplo: Holaa123**/
                             if((strlen($password) >= 8 ) && (preg_match('/[A-Za-z]+/', $password) && preg_match('/[0-9]+/', $password))){
 
-                                /*query de base de datos*/
-                                $query = "SELECT * FROM usuario WHERE correo = 'email' || clave = 'password' ";
+                                //Validamos si la consulta retorna informacion
+                                $query = "SELECT correo FROM usuario WHERE correo = 'email' ";
 
                                 /*Realizar la consulta a la base de datos*/
                                 $querycons = mysqli_query($conex, $query);
@@ -43,7 +43,7 @@ if (isset($_POST['regist'])) {
                                 $resultquery = mysqli_num_rows($querycons);
 
                                  /*SI el dato existe en la base de datos*/
-                                if($resultquery =! 0){
+                                if($resultquery > 0){
                                     ?>
                                     <h3 class="error" >No mi rey, ya existe.</h3>
                                     <?php

@@ -27,7 +27,7 @@
     </form>   
 
     <?php
-    include("../database/validate.php");
+    include("../database/validate_user_email.php");
     ?>
 
 </body>

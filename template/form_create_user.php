@@ -1,5 +1,5 @@
 <?php
-include("../database/register_user_web.php");
+include("../database/create_user_web.php");
 ?>
 <!-- Modal Agregar Nuevo Usuario -->
 <div>
@@ -15,27 +15,41 @@ include("../database/register_user_web.php");
       <div class="modal-body">
       <!-- Modal Body -->
       <!-- Nombre -->
+      <div>
         <label for="validationCustom01" class="form-label">Nombre</label>
         <input type="text" class="form-control" name="nameCreate" placeholder="Ejemplo: Jennifer Lawrance"></input>
+        <?php  ?>
+      </div>
+
       <!-- Nombre -->
+      <!-- Direccion -->
+      <div>
+        <label for="">Direccion</label>
+        <input type="text" class="form-control" name="addressCreate"  placeholder="Ejemplo: La Coila #681"></input>       
+      </div>
 
-      <label for="">Direccion</label>
-      <input type="text" class="form-control" name="addressCreate"  placeholder="Ejemplo: La Coila #681"></input>
+      <div>
+        <label for="">Telefono</label>
+        <input type="text" class="form-control" name="phoneCreate"  placeholder="Ejemplo: +56923456789" ></input>
+      </div>
 
-      <label for="">Telefono</label>
-      <input type="text" class="form-control" name="phoneCreate"  placeholder="Ejemplo: +56923456789" ></input>
+      <div>
+        <label for="">Correo</label>
+        <input type="text" class="form-control" name="emailCreate"  placeholder="Ejemplo: nicolas.barrios@alumnos.ucn.cl" ></input>
+      </div>
 
-      <label for="">Correo</label>
-      <input type="text" class="form-control" name="emailCreate"  placeholder="Ejemplo: nicolas.barrios@alumnos.ucn.cl" ></input>
+      <div>
+        <label for="">Clave</label>
+        <input type="text" class="form-control" name="passwordCreate"  placeholder="Ejemplo: Hola123"></input>
+      </div>
 
-      <label for="">Clave</label>
-      <input type="text" class="form-control" name="passwordCreate"  placeholder="Ejemplo: Hola123"></input>
     <!-- Modal Body -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <input class="btn btn-primary" type="submit" name="btnCreate" value="Agregar">
       </div>
+      <?php echo $errorError ?>
     </div>
   </div>
 </div>

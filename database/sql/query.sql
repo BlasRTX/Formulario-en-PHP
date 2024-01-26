@@ -16,11 +16,17 @@ DELETE FROM `usuario` WHERE 0
 
 --Creacion de consultas dentro del proyecto--
 
---Consultar cuenta existente utilizando correo y clave--
-SELECT * FROM usuario WHERE correo = '$email' AND clave = '$password' ";
+--Consultar cuenta existente utilizando correo--
+SELECT correo FROM usuario WHERE correo = '$email' ";
 
 --Insertar nueva cuenta--
 "INSERT INTO usuario(nombre, direccion, telefono, correo, clave, fecha) VALUES --('$name', '$address', '$phone', '$email', '$password', '$date')";
 
+-- Consultar usuarios basado en ID--
+sql = "SELECT * FROM `usuario` WHERE ID='$id' ";
 
---Creacion de consultas SQL con NUEVAS TABLAS--
+--Actualizar usuarios--
+sql = ($conex, " UPDATE `usuario` SET `nombre`='',`direccion`='',`telefono`='',`correo`='',`clave`='',`fecha`='' WHERE `id`='' ");
+
+--Eliminar--
+sql = " DELETE FROM `usuario` WHERE `id`='' ";

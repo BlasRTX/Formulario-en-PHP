@@ -38,7 +38,7 @@ include("../template/form_update_user.php");
     <!-- Informacion de la base de datos-->
     <?php
     /*Require en caso de error, cierra inmetiato*/
-    require("../database/conection.php");
+    require("../database/connection.php");
     /*Acceder a consulta base de datos*/
     $query = ("SELECT * FROM `usuario`");
     /*Almacenar consulta para ejecutar*/
@@ -74,7 +74,6 @@ include("../template/form_update_user.php");
             
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 
 </body>
 </html>

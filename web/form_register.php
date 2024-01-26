@@ -45,7 +45,7 @@
     </form>
 <!--llamar al archivo que contiene el registro de los datos a la base de datos-->
     <?php
-    require("../database/register.php");
+    require("../database/register_user_web.php");
     ?>
 </body>
 </html>
