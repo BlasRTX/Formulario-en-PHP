@@ -3,7 +3,7 @@ include("../database/create_user_web.php");
 ?>
 <!-- Modal Agregar Nuevo Usuario -->
 <div>
-<form autocomplete="off" method="POST">
+<form autocomplete="off" method="POST" id="create_Form">
 <!-- Modal Agregar Nuevo Usuario -->
 <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -47,13 +47,13 @@ include("../database/create_user_web.php");
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input class="btn btn-primary" type="submit" name="btnCreate" value="Agregar">
+        <input class="btn btn-primary" type="submit" name="btnCreate" id="idCreate" value="Agregar">
       </div>
-      <?php echo $errorError ?>
     </div>
   </div>
 </div>
 <!-- Modal Agregar Nuevo Usuario -->
 </form>
+
 
 </div>
