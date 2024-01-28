@@ -36,6 +36,7 @@ while($row= mysqli_fetch_assoc($sql_result)){
     
           <label for="">Correo</label>
           <input type="text" class="form-control" name="emailUpdate" value="'.$sql_query_email.'" placeholder="Ejemplo: nicolas.barrios@alumnos.ucn.cl" ></input>
+          <span></span>
     
           <label for="">Clave</label>
           <input type="text" class="form-control" name="passwordUpdate" value="'.$sql_query_pass.'" placeholder="Ejemplo: Hola123"></input>

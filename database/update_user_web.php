@@ -11,9 +11,20 @@ if (isset($_POST['btn_update_user'])) {
         $passwordUpdate = ($_POST['passwordUpdate']);
         $dateUpdate = date("d/m/y");
 
-        $sql_update_users = "UPDATE usuario SET nombre='$nameUpdate',  direccion='$addressUpdate', telefono='$phoneUpdate'," + 
-                            " correo='$emailUpdate', clave='$passwordUpdate' WHERE id = '$idUpdate' ";
+        if(filter_var($emailUpdate, FILTER_VALIDATE_EMAIL)){
+                $sql_query_email = "SELECT correo FROM usuario WHERE id = '$idUpdate' ";
+                $sql_result = mysqli_query($conex, $sql_query_email);
+                $update_email = mysqli_num_rows($sql_result);
 
+                    if($update_email > 0){
+
+                    }
+        }else{
+                $sql_update_users = "UPDATE usuario SET nombre='$nameUpdate',  direccion='$addressUpdate', telefono='$phoneUpdate'," + 
+                            " correo='$emailUpdate', clave='$passwordUpdate' WHERE id = '$idUpdate' ";
+        }
+   
 }
+
 
 ?>
