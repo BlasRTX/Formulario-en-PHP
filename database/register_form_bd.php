@@ -34,7 +34,7 @@ if (isset($_POST['regist'])) {
                             if((strlen($password) >= 8 ) && (preg_match('/[A-Za-z]+/', $password) && preg_match('/[0-9]+/', $password))){
 
                                 //Validamos si la consulta retorna informacion
-                                $query = "SELECT correo FROM usuario WHERE correo = 'email' ";
+                                $query = "SELECT correo FROM usuario WHERE correo = '$emai' ";
 
                                 /*Realizar la consulta a la base de datos*/
                                 $querycons = mysqli_query($conex, $query);

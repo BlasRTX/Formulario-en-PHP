@@ -1,9 +1,15 @@
 <?php
-    /*Llama la conexion de la base de datos*/
-    //include("../database/conection.php");
+include("../database/conection.php");
 
 
-    /* Llama al metodo post del modal form_create_user.php*/
+$nameError = "";
+$addressError = "";
+$phoneError="";
+$emailError = "";
+$passwordError = "";
+
+$errorInput = "";
+
     if (isset($_POST["btncreate"]) ) {
         $nameCreate = ($_POST['nameCreate']);
         $addressCreate = ($_POST['addressCreate']);
@@ -12,38 +18,71 @@
         $passwordCreate = ($_POST['passwordCreate']);
         $dateCreate = date("d/m/y");
 
-
-        if(empty($nameCreate) || (preg_match('/^[a-zA-Z\s]+$/', $nameCreate))  ){
-            echo "Nombre no fue ingresado correctamente";
-        }
-
-        if(empty($addressCreate) || (preg_match('/^[a-zA-Z0-9\s\.,#\-]+$/', $addressCreate)) ){
-            echo "Direccion no fue ingresado correctamente";
-        }
-
-        if(empty($phoneCreate) || ( (preg_match('/^(\+?56)?(\s?)(0?9)(\s?)[1-9]\d{3}(\s?)\d{4}$/', $phoneCreate)) && (!preg_match('/^\+?\d{1,3}[-\s]?\d{3,14}$/', $phoneCreate))  ) ){
-            echo "Telefono no fue ingresado correctamente";
-        }
-
-        if(empty($emailCreate) || (filter_var($emailCreate, FILTER_VALIDATE_EMAIL)) ){
-                //Ver si el correo ya existen en base de datos
-               $query = "SELECT correo FROM usuario WHERE correo = '$emailCreate' ";
-               $querycons = mysqli_query($conex, $query);
-               $resultquery = mysqli_num_rows($querycons);
-                   if($resultquery > 0){
-                         echo "Existe un usuario con el correo asociado.";
-                   }
+        if( (empty($nameCreate)) && (empty($addressCreate)) && (empty($phoneCreate)) && (empty($emailCreate)) && (empty($passwordCreate)) ) {
+            $errorInput = "Rellenar TODOS los campos para continuar. ";
         }else{
-            echo "Correo no fue ingresado correctamente";
+        //Informacion para validar
+        //Nombre
+        //Si el nombre ingresado esta vacio o nulo
+        if(empty($nameCreate)){
+            $nameError = "El nombre es requerido. ";
+        }else{
+            //Si el nombre ingresado cumple con los caracteres
+            if(!preg_match('/^[a-zA-Z\s]+$/', $nameCreate)){
+                $nameError = "El nombre ingresado posee caracteres invalidos. ";
+            }
         }
-
-        if(empty($passwordCreate) || (!filter_var($passwordCreate, FILTER_VALIDATE_EMAIL)) ){
-            echo "Clave no fue ingresado correctamente";
+        //Direccion
+        //Si direccion fue ingresada esta vacio o nulo
+        if(empty($addressCreate)){
+            $addressError = "La direccion es requerido. ";
+        }else{
+            //Si direccion ingresada cumple con los caracteres
+            if(!preg_match('/^[a-zA-Z0-9\s\.,#\-]+$/', $addressCreate)){
+                $addressError = "La direccion ingresada posee caracteres invalidos. ";
+            }
         }
+        //Telefono
+        //Si el telefono ingresada esta vacio o nulo
+        if(empty($phoneCreate)){
+            $phoneError = "El numero de telefono es requerido. ";
+        }else{
+            //Si direccion ingresada cumple con los caracteres
+            if(!preg_match('/^(\+?56)?(\s?)(0?9)(\s?)[1-9]\d{3}(\s?)\d{4}$/', $phoneCreate)){
+                $phoneError = "El numero ingresado posee caracteres invalidos. ";
+            }
+        }
+        //Email
+        //Si direccion fue ingresada esta vacio o nulo
+        if(empty(emailCreate)){
+            $emailError = "El numero de telefono es requerido. ";
+        }else{
+        //Si direccion ingresada cumple con los caracteres
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailError= "El correo ingresado posee caracteres invalidos. ";
+                }else{
+                    //validar si el correo ya existe/esta en uso BD
+                }
+        }
+        //Clave
+        //Si la clave fue ingresada esta vacio o nulo
+        if(empty($passwordCreate)){
+            $passwordError = "La clave es requerida. ";
+        }else{
+        //Si la clave ingresada cumple con los caracteres
+            if(strlen($passwordCreate) < 8){
+                $passwordError = "El tamanio de la clave son 8 caracteres. ";
+            }             
+            if(!preg_match('/[A-Za-z]+/', $passwordCreate)){
+                $passwordError = "Debe iniciar con 1 Mayuscula. ";
+            }
+            if(!preg_match('/[0-9]+/', $password)){
+                $passwordError = "Cantidad de numeros recomendada: 3. ";
+            }            
+        }
+        
+      }//Fin else inicial
 
-       
-    }else{
-        echo "Rellene los campos para continuar";
-    }
-
+    }//Fin del if inicial
+    
 ?>
