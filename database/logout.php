@@ -7,6 +7,6 @@ session_start(); //Iniciar o reaundar sesion
 session_unset(); //Libera todos los datos de la sesion
 session_destroy(); //Desttruye los datos de la sesion()
 
-header('Location: login.php'); //Regresar a iniciar sesion
+header('Location: ../web/login.php'); //Regresar a iniciar sesion
 exit;
 ?>

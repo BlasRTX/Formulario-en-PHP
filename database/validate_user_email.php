@@ -3,7 +3,7 @@
 /*llamar al archivo que contiene la conexion a la base de datos*/
 require("../database/connection.php");
 
-$messageError = array();
+$emailExist = "";
 
 //Validar que el boton de login para iniciar sesion haya sido presionado
 if (isset($_POST['loginis'])) {
@@ -15,18 +15,18 @@ if (isset($_POST['loginis'])) {
              if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 if((strlen($password) >= 8 ) && (preg_match('/[A-Za-z]+/', $password) && preg_match('/[0-9]+/', $password))){
                         //Preparar la informacion a consultar de la base de datos
-                        $query = "SELECT correo FROM usuario WHERE correo = '$email' ";
+                        $query = "SELECT * FROM usuario WHERE correo = '$email' AND clave='$password' ";
                         $result = mysqli_query($conex, $query);
-                        $val_query = mysqli_num_rows($result);
-                        //Validamos si la consulta retorna informacion
-                        if($val_query > 0){
-                                header("Location: begin.php");
+                        //$val_query = mysqli_num_rows($result);
+                        $val_query = mysqli_fetch_array($result);
+                        //Validamos los privilegios del usuarios antes de acceder al sistema
+                        if($val_query['id'] == 1){
+                                header("Location: ../web/begin.php");
                                 exit();        
                         }else{
-                                //Si ya existe un correo asociado
-                                ?>
-                                <h3 class="error" >Existe un correo asociado.</h3>
-                                <?php
+                            if($val_query['id'] == 2){
+                                //header("Location: ../web/client.php");
+                                }
                         }
 
                 }else{

@@ -56,7 +56,7 @@ include("../template/form_update_user.php");
       <td scope="row"><?php echo $raw['fecha']; ?></td>
       <th>
       <a href="" class="btn btn-warning" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >Editar</a>
-      <a href="" class="btn btn-danger" >Eliminar</a>
+      <a href="../web/table_user.php" class="btn btn-danger" >Eliminar</a>
       </tr>
       </tr>
      
