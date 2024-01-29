@@ -13,9 +13,6 @@ if(isset($_GET['id'])){
     }else{
         //Error al eliminar usuario
     }
-
-
-
 }
 
 
