@@ -1,5 +1,6 @@
 <?php
 
+
 include("../database/conection.php");
 
 if(isset($_GET['id'])){
@@ -9,7 +10,8 @@ if(isset($_GET['id'])){
     $sql_result = mysqli_query($conex, $sql_delete_user);
 
     if($sql_result > 0){
-        //Uusario eliminado
+        //Usuario eliminado, volver a home
+        header('Location: ../web/home.php');
     }else{
         //Error al eliminar usuario
     }

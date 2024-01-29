@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /*llamar al archivo que contiene la conexion a la base de datos*/
 require("../database/connection.php");
@@ -21,6 +22,7 @@ if (isset($_POST['loginis'])) {
                         $val_query = mysqli_fetch_array($result);
                         //Validamos los privilegios del usuarios antes de acceder al sistema
                         if($val_query['id'] == 1){
+                                $_SESSION['email'] = $email;
                                 header("Location: ../web/begin.php");
                                 exit();        
                         }else{
